@@ -16,20 +16,23 @@ namespace MovieCollection.Models
     }
     public class Film
     {
-        [Required]
+        [Required(ErrorMessage = "Title is required!")]
         public string Title { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Year is required!")]
         public int Year { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Director is required!")]
         public string Director { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Rating is required!")]
         public RatingTypes Rating { get; set; }
 
         public bool Edited { get; set; }
 
         public string LentTo { get; set; }
 
-        [StringLength(25)]
+        [StringLength(25, ErrorMessage = "Notes must be less than 25 characters!")]
         public string Notes { get; set; }
     }
 }
