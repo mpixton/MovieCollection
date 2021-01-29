@@ -50,15 +50,23 @@ namespace MovieCollection.Controllers
         [HttpPost]
         public IActionResult AddFilm(Film film)
         {
-            TempStorage.AddFilm(film);
-            return View("Confirmation", film);
+            if (ModelState.IsValid)
+            {
+                TempStorage.AddFilm(film);
+                return View("Confirmation", film);
+            }
+            else
+            {
+                return View(film);
+            }
+            
         }
 
         // GET: /Home/FilmCollection
         [HttpGet]
         public IActionResult FilmCollection()
         {
-            return View(TempStorage.Films);
+            return View(TempStorage.Films.Where(f => f.Title != "Independence Day"));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
