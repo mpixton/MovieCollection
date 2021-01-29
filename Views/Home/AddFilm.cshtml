@@ -2,6 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    ViewData["PageName"] = "Add Film";
     ViewData["Title"] = "Add A Movie To The Collection";
 }
 
@@ -44,6 +45,6 @@
             @Html.EditorFor(f => f.Notes)
             @Html.ValidationMessageFor(f => f.Notes)
         </div>
-        <input type="submit" name="AddFilm" value="Add a Film" />
+        <input type="submit" name="AddFilm" value="Add a Film" class="btn btn-primary" />
     </div>
 </form>
