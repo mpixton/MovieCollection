@@ -18,22 +18,36 @@ namespace MovieCollection.Controllers
             _logger = logger;
         }
 
+        // GET: /
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
+        // GET: /Home/Privacy
+        [HttpGet]
         public IActionResult Privacy()
         {
             return View();
         }
 
+        // GET: /Home/Podcasts
+        [HttpGet]
         public IActionResult Podcasts()
         {
             return View();
         }
 
+        // GET: /Home/AddFilm
         [HttpGet]
+        public IActionResult AddFilm()
+        {
+            return View();
+        }
+
+        // POST: /Home/AddFilm
+        [HttpPost]
         public IActionResult AddFilm()
         {
             return View();

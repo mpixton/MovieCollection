@@ -7,7 +7,7 @@
 
 @model MovieCollection.Models.Film;
 
-@Html.BeginForm("AddFilm", "Home")
+<form asp-action="AddFilm" method="post">
     <div class="container col-lg-1">
         @Html.LabelFor(f => f.Title)
         @Html.EditorFor(f => f.Title)
