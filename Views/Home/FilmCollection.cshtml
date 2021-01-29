@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "View the Film Collection";
+}
+
+@model  IEnumerable<MovieCollection.Models.Film>
+
+<div>
+    <h2>@ViewData["Title"]</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Director</th>
+                <th>Year</th>
+                <th>Rating</th>
+                <th>Edited</th>
+                <th>Lent To</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (MovieCollection.Models.Film f in Model)
+            {
+            <tr>
+                <td>@f.Title</td>
+                <td>@f.Director</td>
+                <td>@f.Year</td>
+                <td>@f.Rating</td>
+                <td>@f.Edited</td>
+                <td>@f.LentTo</td>
+                <td>@f.Notes</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

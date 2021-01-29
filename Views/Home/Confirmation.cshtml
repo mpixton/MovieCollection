@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Confirmation";
+    if (Model.Rating == RatingTypes.R)
+    {
+        ViewData["Message"] = "Are you sure?";
+    }
+    else
+    {
+        ViewData["Message"] = "Your addition will be appreciated.";
+    }
+}
+
+@model MovieCollection.Models.Film
+
+<div>
+    <h2>Your addition has been processed.</h2>
+    <p>@ViewData["Message"]</p>
+    <p>Click <a asp-action="FilmCollection">here</a> to see the list.</p>
+</div>

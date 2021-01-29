@@ -48,9 +48,17 @@ namespace MovieCollection.Controllers
 
         // POST: /Home/AddFilm
         [HttpPost]
-        public IActionResult AddFilm()
+        public IActionResult AddFilm(Film film)
         {
-            return View();
+            TempStorage.AddFilm(film);
+            return View("Confirmation", film);
+        }
+
+        // GET: /Home/FilmCollection
+        [HttpGet]
+        public IActionResult FilmCollection()
+        {
+            return View(TempStorage.Films);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
