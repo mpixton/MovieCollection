@@ -7,7 +7,36 @@
 
 @model MovieCollection.Models.Film;
 
-<form>
-    @Html.LabelFor(f => f.Rating)
-    @Html.DropDownListFor(m => m.Rating, Html.GetEnumSelectList(typeof(RatingTypes)))
+@Html.BeginForm("AddFilm", "Home")
+    <div class="container col-lg-1">
+        @Html.LabelFor(f => f.Title)
+        @Html.EditorFor(f => f.Title)
+        @Html.ValidationMessageFor(f => f.Title)
+
+        @Html.LabelFor(f => f.Year)
+        @Html.EditorFor(f => f.Year)
+        @Html.ValidationMessageFor(f => f.Title)
+
+        @Html.LabelFor(f => f.Director)
+        @Html.EditorFor(f => f.Director)
+        @Html.ValidationMessageFor(f => f.Title)
+
+        @Html.LabelFor(f => f.Rating)
+        @Html.DropDownListFor(m => m.Rating, Html.GetEnumSelectList(typeof(RatingTypes)))
+        @Html.ValidationMessageFor(f => f.Title)
+
+        @Html.LabelFor(f => f.Edited)
+        @Html.EditorFor(f => f.Edited)
+        @Html.ValidationMessageFor(f => f.Title)
+
+        @Html.LabelFor(f => f.LentTo)
+        @Html.EditorFor(f => f.LentTo)
+        @Html.ValidationMessageFor(f => f.Title)
+
+        @Html.LabelFor(f => f.Notes)
+        @Html.EditorFor(f => f.Notes)
+        @Html.ValidationMessageFor(f => f.Title)
+
+        <input type="submit" name="AddFilm" value="Add a Film" />
+    </div>
 </form>

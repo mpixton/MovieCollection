@@ -10,6 +10,7 @@ namespace MovieCollection.Models
     {
         G = 0,
         PG = 1,
+        [Display(Name = "PG-13")]
         PG13 = 2,
         R = 3
     }
@@ -18,7 +19,7 @@ namespace MovieCollection.Models
         [Required]
         public string Title { get; set; }
         [Required]
-        public DateTime Year { get; set; }
+        public int Year { get; set; }
         [Required]
         public string Director { get; set; }
         [Required]
@@ -28,6 +29,7 @@ namespace MovieCollection.Models
 
         public string LentTo { get; set; }
 
+        [StringLength(25)]
         public string Notes { get; set; }
     }
 }
