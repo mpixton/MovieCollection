@@ -16,8 +16,14 @@
 
 @model MovieCollection.Models.Film
 
-<div>
-    <h2>Your addition has been processed.</h2>
-    <p>@ViewData["Message"]</p>
-    <p>Click <a asp-action="FilmCollection">here</a> to see the list.</p>
+<div class="container col-lg-8">
+    <div class="row justify-content-center">
+        <h2>Your addition has been processed.</h2>
+    </div>
+    <div class="row justify-content-center">
+        <p>@ViewData["Message"]</p>
+    </div>
+    <div class="row justify-content-center">
+        <p>Click <a asp-action="FilmCollection">here</a> to see the list.</p>
+    </div>
 </div>

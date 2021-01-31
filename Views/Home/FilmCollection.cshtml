@@ -8,32 +8,38 @@
 
 @model  IEnumerable<MovieCollection.Models.Film>
 
-<div>
-    <h2>@ViewData["Title"]</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Director</th>
-                <th>Year</th>
-                <th>Rating</th>
-                <th>Edited</th>
-                <th>Lent To</th>
-                <th>Notes</th>
+<div class="container col-lg-8">
+    <table class="col-12">
+        <thead class="container col-lg-8">
+            <tr class="row">
+                <th class="col-3 text-center"><h3>Title</h3></th>
+                <th class="col-2 text-center"><h3>Director</h3></th>
+                <th class="col-1 text-center"><h3>Year</h3></th>
+                <th class="col-1 text-center"><h3>Rating</h3></th>
+                <th class="col-1 text-center"><h3>Edited</h3></th>
+                <th class="col-2 text-center"><h3>Lent To</h3></th>
+                <th class="col-2 text-center"><h3>Notes</h3></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="container col-lg-8">
             @foreach (MovieCollection.Models.Film f in Model)
             {
-            <tr>
-                <td>@f.Title</td>
-                <td>@f.Director</td>
-                <td>@f.Year</td>
-                <td>@f.Rating</td>
-                <td>@f.Edited</td>
-                <td>@f.LentTo</td>
-                <td>@f.Notes</td>
-            </tr>
+                <tr class="row">
+                    <td class="col-3" style="font-size: 1.5rem">@f.Title</td>
+                    <td class="col-2" style="font-size: 1.5rem">@f.Director</td>
+                    <td class="col-1" style="font-size: 1.5rem">@f.Year</td>
+                    <td class="col-1" style="font-size: 1.5rem">@f.Rating</td>
+                    @if (f.Edited)
+                    {
+                        <td class="col-1" style="font-size: 1.5rem">Yes</td>
+                    }
+                    else
+                    {
+                        <td class="col-1" style="font-size: 1.5rem">No</td>
+                    }
+                    <td class="col-2" style="font-size: 1.5rem">@f.LentTo</td>
+                    <td class="col-2" style="font-size: 1.5rem">@f.Notes</td>
+                </tr>
             }
         </tbody>
     </table>

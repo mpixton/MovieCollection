@@ -50,6 +50,8 @@ namespace MovieCollection.Controllers
         [HttpPost]
         public IActionResult AddFilm(Film film)
         {
+            // If the Film passes validaton, add it to the collection.
+            // Else, render the AddFilm page with the validation messages.
             if (ModelState.IsValid)
             {
                 TempStorage.AddFilm(film);
@@ -66,6 +68,8 @@ namespace MovieCollection.Controllers
         [HttpGet]
         public IActionResult FilmCollection()
         {
+            // Filter Independence Day out of the collection cause its not as American
+            // as the Real Most American Movie Ever, Rocky IV.
             return View(TempStorage.Films.Where(f => f.Title != "Independence Day"));
         }
 
