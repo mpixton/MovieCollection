@@ -49,7 +49,7 @@
                 @Html.LabelFor(f => f.Rating)
             </div>
             <div class="col">
-                @Html.DropDownListFor(m => m.Rating, Html.GetEnumSelectList(typeof(RatingTypes)))
+                @Html.DropDownListFor(m => m.Rating, Html.GetEnumSelectList(typeof(RatingTypes)), "Please Choose a Rating")
             </div>
             <div class="col">
                 @Html.ValidationMessageFor(f => f.Rating)
