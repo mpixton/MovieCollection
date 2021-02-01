@@ -19,6 +19,7 @@ namespace MovieCollection.Controllers
         }
 
         // GET: /
+        // Home page
         [HttpGet]
         public IActionResult Index()
         {
@@ -26,6 +27,7 @@ namespace MovieCollection.Controllers
         }
 
         // GET: /Home/Privacy
+        // Privacy page
         [HttpGet]
         public IActionResult Privacy()
         {
@@ -33,6 +35,7 @@ namespace MovieCollection.Controllers
         }
 
         // GET: /Home/Podcasts
+        // Podcast page
         [HttpGet]
         public IActionResult Podcasts()
         {
@@ -40,6 +43,7 @@ namespace MovieCollection.Controllers
         }
 
         // GET: /Home/AddFilm
+        // Add Film page
         [HttpGet]
         public IActionResult AddFilm()
         {
@@ -47,6 +51,7 @@ namespace MovieCollection.Controllers
         }
 
         // POST: /Home/AddFilm
+        // Add Film form submission
         [HttpPost]
         public IActionResult AddFilm(Film film)
         {
@@ -65,6 +70,7 @@ namespace MovieCollection.Controllers
         }
 
         // GET: /Home/FilmCollection
+        // Film Collection page
         [HttpGet]
         public IActionResult FilmCollection()
         {
