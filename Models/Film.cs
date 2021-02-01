@@ -26,7 +26,7 @@ namespace MovieCollection.Models
         /// Year the Film was published
         /// </summary>
         [Required(ErrorMessage = "Year is required!")]
-        public int Year { get; set; }
+        public int? Year { get; set; }
 
         /// <summary>
         /// Director of the Film
@@ -38,7 +38,7 @@ namespace MovieCollection.Models
         /// Rating of the Film
         /// </summary>
         [Required(ErrorMessage = "Rating is required!")]
-        public RatingTypes Rating { get; set; }
+        public RatingTypes? Rating { get; set; }
 
         /// <summary>
         /// If the Film has been edited
