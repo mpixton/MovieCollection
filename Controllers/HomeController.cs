@@ -34,25 +34,25 @@ namespace MovieCollection.Controllers
             return View();
         }
 
-        // GET: /Home/Podcasts
+        // GET: /Podcasts
         // Podcast page
-        [HttpGet]
+        [HttpGet("Podcast")]
         public IActionResult Podcasts()
         {
             return View();
         }
 
-        // GET: /Home/AddFilm
+        // GET: /AddFilm
         // Add Film page
-        [HttpGet]
+        [HttpGet("AddFilm")]
         public IActionResult AddFilm()
         {
             return View();
         }
 
-        // POST: /Home/AddFilm
+        // POST: /AddFilm
         // Add Film form submission
-        [HttpPost]
+        [HttpPost("AddFilm")]
         public IActionResult AddFilm(Film film)
         {
             // If the Film passes validaton, add it to the collection.
@@ -69,9 +69,9 @@ namespace MovieCollection.Controllers
             
         }
 
-        // GET: /Home/FilmCollection
+        // GET: /FilmCollection
         // Film Collection page
-        [HttpGet]
+        [HttpGet("FilmCollection")]
         public IActionResult FilmCollection()
         {
             // Filter Independence Day out of the collection cause its not as American
