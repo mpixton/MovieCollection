@@ -10,7 +10,7 @@
 
 
 <div class="container col-lg-6 my-4">
-    <form asp-action="AddFilm" method="post">
+    <form asp-controller="Home" asp-action="AddFilm" method="post">
         <div class="row my-2">
             <div class="col">
                 @Html.LabelFor(f => f.Title)
