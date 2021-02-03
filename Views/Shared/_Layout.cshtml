@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["PageName"] - MovieCollection</title>
+     <title>@ViewData["PageName"]</title>
     <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico"/>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <h1>@ViewData["Title"]</h1>
+    <div class="m-3">
+        <h1>@ViewData["Title"]</h1>
+    </div>
 
     <nav class="navbar navbar-expand-sm bg-dark">
         <div class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link"><button class="btn btn-primary">Home</button></a></div>
@@ -17,11 +19,11 @@
         <div class="nav-item"><a asp-controller="Home" asp-action="AddFilm" class="nav-link"><button class="btn btn-primary">Add a Film</button></a></div>
         <div class="nav-item"><a asp-controller="Home" asp-action="Podcasts" class="nav-link"><button class="btn btn-primary">My Podcast</button></a></div>
     </nav>
-
+    
     @RenderBody()
 
     <br />
     <br />
-    <footer class="footer text-center">This Worked, Copyright 2021</footer>
+    <footer class="footer text-center bg-info">This Worked, Copyright 2021</footer>
 </body>
 </html>
